@@ -24,8 +24,13 @@
 
   <script>// Define Data
 
+    // un array de numbers, contiene los valores de la coordenada X, que son los m2
     var xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+
+    // un array de numbers, contiene los valores de la coordenada Y, que es el precio en millones de (dolares?)
     var yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+    // un array con único objeto. Dicho objeto tiene 3 propiedades: la x, para indicar los valores de la coordenada X, la y para indicar los valroes de la coordenada Y y una propiedad que se llama 'mode' que es el tipo de marcador/estilo de cada uno de los valores
     var data = [{
       x: xArray,
       y: yArray,
@@ -33,6 +38,10 @@
     }];
 
     // Define Layout
+    // es un objeto que tiene 3 propiedades. 
+    // La propiedad xaxis es un objeto que tiene a su vez dos propiedades
+    // range: es un array , el rango mínimo y máximo de la X
+    // title: es un string, la leyenda del eje X
     var layout = {
       xaxis: { range: [40, 180], title: "Square Meters" },
       yaxis: { range: [5, 18], title: "Price in Millions" },
@@ -40,6 +49,9 @@
     };
 
     // Display using Plotly
+    // Este objeto Plotly no existe en JS "normal". Lo tenemos disponible gracias al <script> de la línea 23. Este objeto tiene un método que se llama 'newPlot' que le pasamos 3 argumentos
+    // 1. "myPlot"; es el elemento del HTML con el id="myPlot" para introducir en dicho contenedor el gráfico
+    // 2. El segundo y tercer parámetro son los datos y la estructura del gráfico respectivamente.
     Plotly.newPlot("myPlot", data, layout);
 
   </script>
