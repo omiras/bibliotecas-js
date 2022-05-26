@@ -20,10 +20,18 @@
   <h1>Ploty JS</h1>
   <h2>A continuación un gráfico utilizando la biblioteca Ploty.</h2>
   <div id="myPlot" style="width:100%"></div>
-  <script src=" https://cdn.plot.ly/plotly-latest.min.js">
+  <form class="container">
+    <label for="x">X: </label>
+    <input type="number" name="x" id="x" min="40" max="180" required>
+    <label for="y">Y: </label>
+    <input type="number" name="y" id="y" min="5" max="18" required>
+    <input type="submit" value="Añadir valores">
+  </form>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js">
   </script>
 
   <script>// Define Data
+
 
     var xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160];
     var yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15, 16];
@@ -34,7 +42,6 @@
       marker: {
         symbol: "star-diamond",
         color: "green",
-        size: 10
       }
     }];
 
@@ -49,6 +56,24 @@
     Plotly.newPlot("myPlot", data, layout);
 
   </script>
+
+  <script>
+
+    document.querySelector("form").addEventListener("submit", addValues);
+
+    function addValues(event) {
+      event.preventDefault();
+      let x = document.querySelector("#x").value;
+      let y = document.querySelector("#y").value;
+
+      xArray.push(x);
+      yArray.push(y);
+
+      Plotly.newPlot("myPlot", data, layout);
+
+    }
+  </script>
+
 </body>
 
 </html>
