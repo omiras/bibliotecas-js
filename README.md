@@ -44,7 +44,7 @@ Crea un formulario que permita añadir nuevas coordenadas X,Y al gráfico actual
 
 ### Apartado 4
 
-Crea un nuevo gráfico de tipo [pastel](https://oscarm.tinytake.com/msc/Njg4NDQwNF8xOTU1NzYwOQ) en el fichero "ejercicio-2-pie.html". Nos han pedido crear un gráfico con los 5 principales lenguajes de programación del lado back end.
+Crea un nuevo gráfico de tipo [pastel](https://oscarm.tinytake.com/msc/Njg4Njg5M18xOTU2MDU2MA) en el fichero "ejercicio-2-pie.html". Nos han pedido crear un gráfico con los 5 principales lenguajes de programación del lado back end.
 
 1. PHP :44%
 2. JavaScript: 33%
